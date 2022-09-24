@@ -34,7 +34,7 @@ with open('Task_4_output.txt', 'w') as n:
 
 
 with open ('Task_4_output.txt', 'r') as s:
-    my_line = s.read()
+    my_line = s.read().strip()
 
 
 def unpack(my_line):
@@ -49,3 +49,8 @@ def unpack(my_line):
     return new_str
 print(unpack(my_line))
 
+
+res_2 = unpack(my_line)
+
+with open ('Task_4_output.txt', 'a') as v:
+   v.write(f'{res_2}\n')
